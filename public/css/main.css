@@ -1,0 +1,329 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+
+/* Navbar */
+.navbar{
+    display:flex;
+    height:6vh;
+    width:100%;
+    align-items: center;
+    column-gap:70%;
+    background-color:whitesmoke;
+}
+.navbar .section-1 .section-2
+{
+    height:100%;
+    width:50%;
+}
+.navbar .section-1{
+margin-left: 10px;
+}
+.navbar .section-2 a{
+    text-decoration: none;
+    color:#000;
+    margin-right:3vw;
+    font-size: larger;
+}
+.navbar .section-2 a:hover{
+    text-decoration:underline;
+}
+
+/* Main */
+main{
+    /* width:100vw; */
+    height:88vh;
+    display:flex;
+    column-gap:30px;
+    align-items: center;
+    justify-content: center;
+    background: #1D482F;
+    color:#fff;
+    position: relative;
+}
+
+main .animation-container{
+    height:500px;
+    width: 500px;
+    background-color:#1D482F;
+    position:absolute;
+    z-index:100;
+    left:950px;
+    border-left: solid #fff;
+}
+
+main .section-1, main .section-2
+{
+    height:100%;
+    width:50%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+main .section-1{
+    justify-content: end;
+    position:relative;
+    left:570px;
+}
+.form
+{
+    height:50%;
+    width:60%;
+    background-color:rgba(184,192,204,0.2);
+    display:flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items:center;
+    border-radius:20px;
+    /* padding:20px; */
+    transition: 0.3s;
+    margin-right:200px;
+    position: relative;
+    z-index: 1000;
+}
+.form:hover{
+    height:55%;
+    width:70%;
+}
+.form form 
+{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items:center;
+    /* padding:50px 0 50px 0; */
+}
+
+.form form input
+{
+    border:none;
+    width:100%;
+    height:60px;
+    border-radius:10px;
+    padding-left:30px;
+}
+.form form .container-1:nth-child(3) input
+{
+    height: 90px;
+}
+.form form label
+{
+    color:white;
+}
+
+.form form .container-1
+{
+    width:90%;
+}
+
+.btn-container
+{
+    height: 70px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    column-gap: 30px;
+}
+#selection-input{
+    width:0px;
+    height:0px;
+    display:flex;
+    margin-bottom:2px;
+}
+.selection-list{
+    border-radius: 10px;
+    width:90px;
+    height:30px;
+    margin-bottom:17px;
+    color:#1D482F;
+    font-weight: bold;
+}
+
+button
+{
+    border:none;
+    background:#155a39;
+    height:50px;
+    width:160px;
+    margin-bottom:10px;
+    color:white;
+    border-radius: 30px;
+    border:1px solid white;
+    transition:0.2s;
+}
+
+button:hover
+{
+    height:60px;
+    width: 170px;
+}
+.big-text
+{
+    height:350px;
+    width:500px;
+    /* background-color: aliceblue; */
+    position:relative;
+}
+.big-text h1
+{
+    font-size:5rem;
+}
+.small-text
+{
+    height:100px;
+    width:500px;
+    /* background-color: rgb(84, 105, 123); */
+    position:relative;
+    display: flex;
+    align-items: end;
+}
+
+footer
+{
+    width: 100%;
+    height: 6vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:small;
+}
+
+
+
+
+/* Login Page ------------------------------------------------------ */
+.container-login{
+    height:88vh;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    background-color:#fff;
+
+}
+.container-login .login{
+    height:70vh;
+    width:90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left:15%;
+}
+.container-login .form{
+    margin:0;
+    width:40%;
+    height:70%;
+    border-radius:0px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+.form-login:hover{
+    height:70%;
+    width:40%;
+}
+.container-login .register{
+    height:70%;
+    width:40%;
+    background-color:#1D482F;
+    position:relative;
+    z-index:1000000;
+    transition:0.6s;
+}
+.auth-welcome{
+    position:relative;
+    z-index:1000000;
+    right:20vw;
+    height:60%;
+    width:40%;
+    background-color:#1D482F;
+    transition: 0.4s;
+    border-radius: 20px;
+    border:2px solid #1D482F;
+    display: flex;
+    justify-content: center;
+    padding-top:20px;
+}
+.form form .input-login
+{
+    border:none;
+    width:100%;
+    height:60px;
+    border-radius:10px;
+    padding-left:30px;
+    background-color:rgba(123, 123, 123, 0.144);
+    margin-top:4px;
+}
+
+.swipe-1{
+    display: none;
+}
+
+/* Login Page ------------------------------------------------------ END*/
+
+
+
+/* Tasks Page ------------------------------------------------------ */
+.container-tasks{
+    height:80vh;
+    width:100%;
+    background-color: #1D482F;
+}
+.search{
+    position:relative;
+}
+.search-bar{
+    display:flex;
+    align-items: center;
+}
+.search-bar input{
+    width:50vw;
+    margin:2vh;
+}
+.icon{
+    width:50px;
+    height:50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.icon:hover{
+    width:60px;
+    height:60px;
+}
+.status-btn{
+    height:90%;
+    width:30vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    position:absolute;
+    right:0;
+    display: flex;
+    justify-content:center;
+    /* column-gap:2vw; */
+    align-items: center;
+}
+
+.status-btn .btn-1{
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    width:30%;
+}
+
+.container-tasks{
+    padding:30px;
+    display: flex;
+    flex-wrap:wrap;
+    column-gap:20px;
+    overflow-y: scroll;
+}
+.card{
+    height:200px;
+    width: 300px;
+}

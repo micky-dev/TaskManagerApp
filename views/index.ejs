@@ -1,1 +1,47 @@
-<h1>Hi there</h1>
+<main>
+    <div class="animation-container">
+        
+    </div>
+    <div class="main-bg"></div>
+    <div class="section-1">
+        <div id="textContainer" class="text-container">
+            <div class="big-text">
+                <h1>Organize        Your Tasks Efficiently.</h1>
+            </div>
+            <div class="small-text">
+                Create, manage, update, and track your to-do list effortlessly.
+            </div>
+        </div>
+    </div>
+    <div class="section-2">
+            <div class="form  form-control">
+                <form action="/create" method="post">
+                    <div class="container-1">
+                        <label>Name</label>
+                        <input type="text" name="title" placeholder="Enter task's title" required>
+                    </div>
+                    <div class="container-1">
+                        <label>Due date</label>
+                        <input type="date" name="dueDate" placeholder="Enter task's name" required>
+                    </div>
+                    <div class="container-1">
+                        <label>Description</label>
+                        <input type="text" name="description" placeholder="Enter description" required>
+                    </div>
+                    <div class="btn-container">
+                        <button type="submit">Submit task</button>
+                        <div class="priority-list">
+                            <label for="selection-input">Priority</label>
+                            <input id="selection-input" list="priorities" name="priority">
+                            <select id="selection-list" class="selection-list" name="priority">
+                                <option value="low">Low</option>
+                                <option style="color: #ffc107" value="medium">Medium</option>
+                                <option style="color:#dc3545" value="high">High</option>
+                                <option style="color:#b22222" value="urgent">Urgent</option>
+                              </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    </div>
+</main>

@@ -2,8 +2,8 @@
 const User = require('../models/userModel')
 const hash_salt = require('../lib/passwordUtils')
 
-//?-----User routes controller
 
+//?-----User routes controller
 module.exports.register = async (req, res, next) => {
         const {username, email, password} = req.body
         const {hash,salt} = hash_salt.genHash(password)
@@ -13,6 +13,5 @@ module.exports.register = async (req, res, next) => {
             salt: salt,
             hash: hash
         }))
-        console.log(user)
-        res.redirect('/')
+        next()
 }

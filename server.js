@@ -1,6 +1,6 @@
 require('dotenv').config()
 require('./config/dbConfig')()
-require('./config/passportConfig')
+
 
 //?-----External Modules
 const express = require('express')
@@ -20,8 +20,7 @@ const app = express()
 app.use(express.urlencoded({
     extended: true
 }))
-app.use(express.json())
-app.use(express.static('public'))
+app.use('/',express.static('public'))
 
 app.use(ejsLayouts)
 app.set('view engine', 'ejs')
@@ -48,6 +47,7 @@ app.use(session({
 //?-----Passport Middleware
 app.use(passport.initialize())
 app.use(passport.session())
+require('./config/passportConfig')
 
 //?-----Routes
 app.use(routes)
@@ -55,12 +55,12 @@ app.use(routes)
 //?-----Error Handling Middleware
 app.use((err, req, res, next) => {
     console.log(err.stack)
-    res.status(err.status || 500).render('error')
+    res.status(err.status || 500).render('error',{renderSearch:true})
 })
 
 //?-----Listening
 app.listen(process.env.PORT || 5000, () => {
-    console.log('Listening')
+    console.log(`Listening: http://localhost:${process.env.PORT||5000}`)
 })
 
 

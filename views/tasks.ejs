@@ -1,0 +1,16 @@
+<div class="container-tasks">
+    <% locals.forEach(element => { %>
+        <div class="card">
+            <div class=''>
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            <button >
+                <a href="/delete/<%= element.slug %>">
+                    delete
+                </a>
+            </button>
+          </div>
+    <% }) %>
+</div>
