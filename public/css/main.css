@@ -248,8 +248,11 @@ footer
     border-radius: 20px;
     border:2px solid #1D482F;
     display: flex;
-    justify-content: center;
+    justify-content:end;
+    align-items: center;
+    padding-bottom:10px;
     padding-top:20px;
+    flex-direction:column;
 }
 .form form .input-login
 {
@@ -266,6 +269,33 @@ footer
     display: none;
 }
 
+.note-wlc{
+    color: #fff;
+}
+#have-acc{
+    display: none;
+}
+.question{
+    color:white;
+}
+.swipe-container{
+    width:100%;
+    height:90px;
+    display: flex;
+    justify-content: center;
+}
+.illustration-1{
+    height:20vw;
+    width:20vw;
+    /* background-color: antiquewhite; */
+    margin:10px;
+    border-radius: 20px;
+    background-image: url('../Images/Work\ in\ progress-amico.png');
+    background-repeat: no-repeat;
+    background-size:contain;
+    display: flex;
+    margin-left:2vw;
+}
 /* Login Page ------------------------------------------------------ END*/
 
 

@@ -6,7 +6,12 @@
         <a class="navbar-brand" href="/">Home</a>
         <a class="navbar-brand" href="/retreive">Tasks</a>
         <i class="bi bi-arrow-bar-right"></i>
-        <a href="/sign-in">Login</a>
+        <% if (authenticated) { %>
+            <a id="user-state" href="/sign-out">Logout</a>
+        <%} %>
+        <% if (!authenticated) { %>
+            <a id="user-state" href="/sign-in">Login</a>
+        <% } %>
     </div>
 
 </div>

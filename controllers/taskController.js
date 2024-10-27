@@ -1,8 +1,7 @@
 //?-----Task Route Controllers
 
 module.exports.default = (req, res, next) => {
-
-    res.render('index',{renderSearch:false})
+    res.render('index',{renderSearch:false,authenticated:req.isAuthenticated()})
 }
 
 module.exports.createTask = async (req, res, next) => {
@@ -25,8 +24,8 @@ module.exports.createTask = async (req, res, next) => {
 module.exports.getAll = async (req, res, next) => {
     try{
         const tasks = await require('../models/taskModel').taskModel.find({userId:(req.user._id).toString()})
-        console.log(tasks)
-        res.render('tasks',{renderSearch:true,locals: tasks})
+        const authanticated = req.isAuthenticated() ? req.isAuthenticated : false
+        res.render('tasks',{renderSearch:true,locals: tasks,authenticated:req.isAuthenticated()})
     }catch(err){
         next(err)
     }
@@ -40,6 +39,5 @@ module.exports.getSearch = async (req, res, next) =>{
             { priority: { $regex:req.body.query, $options: 'i' } },
           ]
     }))
-    console.log(tasks)
-    res.render('tasks',{renderSearch:true,locals: tasks})
+    res.render('tasks',{renderSearch:true,locals: tasks,authenticated:req.isAuthenticated()})
 }

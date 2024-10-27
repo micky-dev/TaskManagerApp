@@ -37,12 +37,16 @@
         const buttonSwipe = document.querySelector('#swipe').addEventListener('click', (event) => {
             authWelcome.style.translate = ('-29.1vw')
             authWelcome.style.backgroundColor = 'white'
-            window.history.pushState({},'','/sign-up');
+            // window.history.pushState({},'','/sign-up');
             event.target.style.display = 'none'
             const element = document.querySelector('#swipe-1')
             element.style.display = 'flex'
             element.style.justifyContent = 'center'
             element.style.alignItems = 'center'
+            document.querySelector('#note-wlc').style.color = '#1D482F'
+            document.querySelector('#dont-have-acc').style.display = 'none'
+            document.querySelector('#have-acc').style.display = 'flex'
+            document.querySelector('#have-acc').style.color = '#1D482F'
             
         })
         const buttonswipe1 = document.querySelector('#swipe-1').addEventListener('click', () => {
@@ -53,6 +57,9 @@
             element.style.display = 'flex'
             element.style.justifyContent = 'center'
             element.style.alignItems = 'center'
+            document.querySelector('#note-wlc').style.color = '#fff'
+            document.querySelector('#dont-have-acc').style.display = 'flex'
+            document.querySelector('#have-acc').style.display = 'none'
         })
         })
     </script>

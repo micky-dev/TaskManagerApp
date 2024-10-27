@@ -28,7 +28,7 @@ router.route('/sign-up')
 //*-----login
 router.route('/sign-in')
 .get((req, res, next) => {
-    res.render('auth',{renderSearch:false})
+    res.render('auth',{renderSearch:false,authenticated:req.isAuthenticated()})
 })
 .post(passport.authenticate('local',{
         successRedirect: '/',
@@ -39,19 +39,12 @@ router.get('/sign-out', (req, res, next) => {
     req.logOut({keepSessionInfo: true},(err) => {
         err ? next(err) : ''
     })
-    res.send('User singed out')
+    res.redirect('/')
 })
 
 
 //?-----Crud Routes
-router.post('/create', (req, res, next) => {
-    if (req.isAuthenticated()){
-        next()
-    }
-    else{
-        next(new Error('Not authanticated'))
-    }
-},taskContorller.createTask)
+router.post('/create',taskContorller.createTask)
 
 router.route('/retreive').get(taskContorller.getAll)
 .post(taskContorller.getSearch)
