@@ -1,6 +1,7 @@
 //?-----Task Route Controllers
 
 module.exports.default = (req, res, next) => {
+    const bool = req.isAuthenticated()
     res.render('index',{renderSearch:false,authenticated:req.isAuthenticated()})
 }
 

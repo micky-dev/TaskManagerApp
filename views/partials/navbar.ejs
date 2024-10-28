@@ -8,10 +8,8 @@
         <i class="bi bi-arrow-bar-right"></i>
         <% if (authenticated) { %>
             <a id="user-state" href="/sign-out">Logout</a>
-        <%} %>
-        <% if (!authenticated) { %>
+        <% } else { %>
             <a id="user-state" href="/sign-in">Login</a>
         <% } %>
     </div>
-
 </div>
