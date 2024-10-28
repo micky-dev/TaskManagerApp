@@ -37,7 +37,7 @@ app.use(session({
         collectionName: 'session-store'
     }),
     cookie:{
-        secure: process.env.NODE_ENV === 'production',
+        // secure: process.env.NODE_ENV === 'production',
         httpOnly: true,
         maxAge: 1000 * 60 * 60 * 12,
         rolling: true
